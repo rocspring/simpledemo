@@ -17,8 +17,8 @@
 		list-style: none;
 	}
 	.canvas{
-		height: 400px;
-		width: 400px;
+		height: 500px;
+		width: 500px;
 		background-color: #000;
 		background-image: -webkit-gradient(radial,
                             50% 500, 1,
@@ -35,13 +35,17 @@
 	ul{
 		position: relative;
 		margin: 100px auto;
-		height: 200px;
-		width: 200px;
+		height: 300px;
+		width: 300px;
+		-webkit-transform-style: preserve-3d;
 	}
 	ul li{
 		position: absolute;
 		height: 100px;
 		width: 100px;
+		left: 100px;
+		top:100px;
+		margin:10px;
 		border: 1px solid white;
 		color: #000;
 		background-color: rgba(255, 255, 255, 0.6);
@@ -51,12 +55,50 @@
 		line-height: 100px;
 		font-family: Times, serif;
 		font-size: 60pt;
+		-webkit-backface-visibility: visible;
+	}
+
+	.ring li:nth-child(1) {
+		-webkit-transform: rotateY(0) translateZ(190px);;
+	}
+	.ring li:nth-child(2) {
+		-webkit-transform: rotateY(30deg) translateZ(190px);;
+	}
+	.ring li:nth-child(3) {
+		-webkit-transform: rotateY(60deg) translateZ(190px);;
+	}
+	.ring li:nth-child(4) {
+		-webkit-transform: rotateY(90deg) translateZ(190px);;
+	}
+	.ring li:nth-child(5) {
+		-webkit-transform: rotateY(120deg) translateZ(190px);;
+	}
+	.ring li:nth-child(6) {
+		-webkit-transform: rotateY(150deg) translateZ(190px);;
+	}
+	.ring li:nth-child(7) {
+		-webkit-transform: rotateY(180deg) translateZ(190px);;
+	}
+	.ring li:nth-child(8) {
+		-webkit-transform: rotateY(210deg) translateZ(190px);;
+	}
+	.ring li:nth-child(9) {
+		-webkit-transform: rotateY(-120deg) translateZ(190px);;
+	}
+	.ring li:nth-child(10) {
+		-webkit-transform: rotateY(-90deg) translateZ(190px);;
+	}
+	.ring li:nth-child(11) {
+		-webkit-transform: rotateY(300deg) translateZ(190px);;
+	}
+	.ring li:nth-child(12) {
+		-webkit-transform: rotateY(330deg) translateZ(190px);;
 	}
 </style>
 <body>
 	
 	<div class="canvas">
-		<ul>
+		<ul  class = "ring">
 			<li>1</li>
 			<li>2</li>
 			<li>3</li>
