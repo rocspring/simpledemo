@@ -30,6 +30,10 @@
 		font-size: 12px;
 		padding-top: 1px;
 		font-family: 'Lucida Grande', Verdana, Arial;
+		-webkit-perspective: 800;
+		-webkit-perspective-origin:50% 150px;
+		-webkit-transition: -webkit-transform 2s;
+		-webkit-transform: translateZ(0px);
 	}
 
 	ul{
@@ -38,7 +42,17 @@
 		height: 300px;
 		width: 300px;
 		-webkit-transform-style: preserve-3d;
+		-webkit-animation: spin 8s infinite linear;
 	}
+	@-webkit-keyframes spin{
+		from{
+			-webkit-transform: rotateY(0);
+		}
+		to{
+			-webkit-transform: rotateY(-360deg);
+		}
+	}
+
 	ul li{
 		position: absolute;
 		height: 100px;
@@ -55,44 +69,46 @@
 		line-height: 100px;
 		font-family: Times, serif;
 		font-size: 60pt;
+		-webkit-box-sizing: border-box;
 		-webkit-backface-visibility: visible;
+		-webkit-transition: -webkit-transform 2s, opacity 2s;
 	}
 
 	.ring li:nth-child(1) {
-		-webkit-transform: rotateY(0) translateZ(190px);;
+		-webkit-transform: rotateY(0) translateZ(220px);;
 	}
 	.ring li:nth-child(2) {
-		-webkit-transform: rotateY(30deg) translateZ(190px);;
+		-webkit-transform: rotateY(30deg) translateZ(220px);;
 	}
 	.ring li:nth-child(3) {
-		-webkit-transform: rotateY(60deg) translateZ(190px);;
+		-webkit-transform: rotateY(60deg) translateZ(220px);;
 	}
 	.ring li:nth-child(4) {
-		-webkit-transform: rotateY(90deg) translateZ(190px);;
+		-webkit-transform: rotateY(90deg) translateZ(220px);;
 	}
 	.ring li:nth-child(5) {
-		-webkit-transform: rotateY(120deg) translateZ(190px);;
+		-webkit-transform: rotateY(120deg) translateZ(220px);;
 	}
 	.ring li:nth-child(6) {
-		-webkit-transform: rotateY(150deg) translateZ(190px);;
+		-webkit-transform: rotateY(150deg) translateZ(220px);;
 	}
 	.ring li:nth-child(7) {
-		-webkit-transform: rotateY(180deg) translateZ(190px);;
+		-webkit-transform: rotateY(180deg) translateZ(220px);;
 	}
 	.ring li:nth-child(8) {
-		-webkit-transform: rotateY(210deg) translateZ(190px);;
+		-webkit-transform: rotateY(210deg) translateZ(220px);;
 	}
 	.ring li:nth-child(9) {
-		-webkit-transform: rotateY(-120deg) translateZ(190px);;
+		-webkit-transform: rotateY(-120deg) translateZ(220px);;
 	}
 	.ring li:nth-child(10) {
-		-webkit-transform: rotateY(-90deg) translateZ(190px);;
+		-webkit-transform: rotateY(-90deg) translateZ(220px);;
 	}
 	.ring li:nth-child(11) {
-		-webkit-transform: rotateY(300deg) translateZ(190px);;
+		-webkit-transform: rotateY(300deg) translateZ(220px);;
 	}
 	.ring li:nth-child(12) {
-		-webkit-transform: rotateY(330deg) translateZ(190px);;
+		-webkit-transform: rotateY(330deg) translateZ(220px);;
 	}
 </style>
 <body>
